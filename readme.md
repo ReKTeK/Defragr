@@ -23,7 +23,7 @@ Precision movement FPS ported off the Quake 3 series of movement physics, most n
 
 You can create your own custom maps using the Unreal Editor, keep in mind though that Defragr is still in development and a lot of CPMA mechanics have not been implimented and some could even change completely (such as jump height / gravity). So be careful when making custom maps because if one mechanic changes your map may become unplayable.
 
-If you are a brave soul who wishes to embark on creating custom maps then there is a separate 
+If you are a brave soul who wishes to embark on creating custom maps then there is a separate walkthrough for you [here](https://github.com/Zinglish/Defragr/blob/master/mapcreation.md).
 
 ## Testing
 
