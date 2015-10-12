@@ -2,6 +2,9 @@
 
 Precision movement FPS ported off the Quake 3 series of movement physics, most notibly the Defrag and CPMA mods for Quake 3. Defragr includes a near direct port of idTech3's physics for the player.
 
+Checkout this video for a preview of the game before cloning / downloading:
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/uT6r55J6jmQ/0.jpg)](http://www.youtube.com/watch?v=uT6r55J6jmQ)
+
 ## Current features
 
 * CPMA Strafe jumping
