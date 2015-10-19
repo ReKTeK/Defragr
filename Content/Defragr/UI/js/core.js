@@ -24,7 +24,7 @@ function _UE4()
 
 	// Initialize code that relies on this class
 	var self = this;
-	window.onload = function(){ self._execReady() };
+	Zepto(function($){ self._execReady(); });
 }
 
 _UE4.prototype = {
