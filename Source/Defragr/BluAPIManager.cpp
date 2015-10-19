@@ -37,10 +37,8 @@ void UBluAPIManager::ParseGenericScriptEvent(FString EventName, FString JSONStri
 	// Set up output
 	TSharedPtr<FJsonObject> OutData = MakeShareable(new FJsonObject);
 
-	
-
-	/* ListFiles() */
-	if(EventName.Equals("GetFileList", ESearchCase::CaseSensitive))
+	// getFileList(path)
+	if(EventName.Equals("getFileList", ESearchCase::CaseSensitive))
 	{
 		GEngine->AddOnScreenDebugMessage(10, 5.0f, FColor::Black, EventName);
 
@@ -67,6 +65,11 @@ void UBluAPIManager::ParseGenericScriptEvent(FString EventName, FString JSONStri
 
 		OutData->SetArrayField("files", FileList);
 	}
+	// getRootDir()
+	else if(EventName.Equals("getRootDir", ESearchCase::CaseSensitive))
+	{
+		OutData->SetStringField("rootDir", FPaths::GameDir());
+	}
 
 
 	// If a callback was specified then commit to executing it with the helper
@@ -81,7 +84,7 @@ void UBluAPIManager::ParseGenericScriptEvent(FString EventName, FString JSONStri
 		TArray<FString> MethodParams;
 		MethodParams.Add(FString::FromInt(callbackID));
 		MethodParams.Add(OutputString);
-		BluEye->ExecuteJSMethodWithParams("BluAPIManager.callback", MethodParams);
+		BluEye->ExecuteJSMethodWithParams("UE4._callback", MethodParams);
 	}
 
 	delete InData;
