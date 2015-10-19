@@ -26,8 +26,6 @@ void UBluAPIManager::SetBlu(UBluEye* BluEyeRef)
 
 void UBluAPIManager::ParseGenericScriptEvent(FString EventName, FString JSONString)
 {
-	GEngine->AddOnScreenDebugMessage(11, 5.0f, FColor::Green, JSONString);
-
 	// Parse the input
 	UBluJsonObj* InData = NewObject<UBluJsonObj>(GetTransientPackage(), UBluJsonObj::StaticClass());
 	InData->init(JSONString);
@@ -40,8 +38,6 @@ void UBluAPIManager::ParseGenericScriptEvent(FString EventName, FString JSONStri
 	// getFileList(path)
 	if(EventName.Equals("getFileList", ESearchCase::CaseSensitive))
 	{
-		GEngine->AddOnScreenDebugMessage(10, 5.0f, FColor::Black, EventName);
-
 		// Prepare an array to insert into out data
 		TArray<TSharedPtr<FJsonValue>> FileList;
 
