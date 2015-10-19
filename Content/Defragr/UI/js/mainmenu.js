@@ -1,4 +1,4 @@
-window.onload = function(){
+UE4.ready(function(){
 
 	mobileConsole.options({
 		showOnError: true,
@@ -7,8 +7,10 @@ window.onload = function(){
 		catchErrors: true
 	});
 
-	GetFileList("E:\\Unreal Projects\\Defragr\\Maps\\", function(data)
+	UE4.getFileList(UE4.getMapsDir(), function(files)
 	{
+		
 	});
 
-};
+});
+
