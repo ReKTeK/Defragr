@@ -44,6 +44,8 @@ public:
 	int32 Armour = 0;
 
 public:
+	uint8 SlotCount = 9;
+
 	UPROPERTY(Category = "Weapons", EditAnywhere, BlueprintReadWrite)
 	TArray<AWeapon*> Slots;
 

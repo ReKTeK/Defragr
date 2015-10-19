@@ -76,7 +76,7 @@ ADefragrPlayer::ADefragrPlayer()
 	}
 
 	// Initialize the weapon slots
-	Slots.Init(NULL, 10);
+	Slots.Init(NULL, SlotCount);
 }
 
 void ADefragrPlayer::SetupPlayerInputComponent(UInputComponent* InputComponent)
@@ -119,10 +119,18 @@ void ADefragrPlayer::NextWeapon()
 {
 	ChangeToSlot++;
 
-	if(ChangeToSlot > 9)
-		ChangeToSlot = 9;
+	if(ChangeToSlot > SlotCount)
+		ChangeToSlot = SlotCount;
 
-	ChangeWeapon = true;
+	// Don't switch to empty slots
+	for(uint8 i = ActiveSlot; i < SlotCount; i++)
+	{
+		if(Slots[i] != NULL)
+		{
+			ChangeWeapon = true;
+			ChangeToSlot = i;
+		}
+	}
 }
 
 void ADefragrPlayer::PreviousWeapon()
