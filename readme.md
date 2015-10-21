@@ -44,7 +44,7 @@ Fork the code then place a pull request [here](https://github.com/Zinglish/Defra
 
 ### Contact
 
-My direct point of contact would be on the Slack channel [Zinglish Does Stuff](https://zinglishdoesstuff.slack.com). I am mostly online however if you cannot catch me there I am available at almost all times via email: zinglish[at]gmail.com.
+You can catch me hanging out on IRC: freenode.net in `#defragr`, if you don't have an IRC client or don't intend to be a permanent fixture you can use the [Freenode Webchat](https://webchat.freenode.net/). If you cannot catch me there I am available at almost all times via email: zinglish[at]gmail.com.
 
 ### Branching
 
