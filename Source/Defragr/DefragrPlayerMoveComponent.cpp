@@ -318,9 +318,9 @@ float UDefragrPlayerMoveComponent::CmdScale()
 	float	total;
 	float	scale;
 
-	max = abs(WishMove.X);
-	if (abs(WishMove.Y) > max) {
-		max = abs(WishMove.Y);
+	max = FMath::Abs(WishMove.X);
+	if (FMath::Abs(WishMove.Y) > max) {
+		max = FMath::Abs(WishMove.Y);
 	}
 	/*if (abs(cmd->upmove) > max) {
 		max = abs(cmd->upmove);
@@ -329,7 +329,7 @@ float UDefragrPlayerMoveComponent::CmdScale()
 		return 0;
 	}
 
-	total = sqrt(WishMove.X * WishMove.X + WishMove.Y * WishMove.Y);
+	total = FMath::Sqrt(WishMove.X * WishMove.X + WishMove.Y * WishMove.Y);
 	scale = (float)GroundSpeed * max / (127.0 * total);
 
 	return scale;

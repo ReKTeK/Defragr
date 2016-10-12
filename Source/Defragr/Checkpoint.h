@@ -32,8 +32,8 @@ public:
 
 public:
 	UFUNCTION()
-	virtual void OnActorEnteredVolume(class AActor* Actor);
+	virtual void OnActorEnteredVolume(class AActor* Actor, class AActor* OtherActor);
 
 	UFUNCTION()
-	virtual void OnActorExitedVolume(class AActor* Actor);
+	virtual void OnActorExitedVolume(class AActor* Actor, class AActor* OtherActor);
 };

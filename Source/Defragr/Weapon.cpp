@@ -16,10 +16,10 @@ AWeapon::AWeapon()
 	RootSceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
 
 	FirstPersonMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("First Person Mesh"));
-	FirstPersonMesh->AttachParent = RootSceneComponent;
+	FirstPersonMesh->SetupAttachment(RootSceneComponent);
 
 	ThirdPersonMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Third Person Mesh"));
-	ThirdPersonMesh->AttachParent = RootSceneComponent;
+	ThirdPersonMesh->SetupAttachment(RootSceneComponent);
 }
 
 void AWeapon::BeginPlay()

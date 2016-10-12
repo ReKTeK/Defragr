@@ -76,13 +76,13 @@ public:
 
 public:
 	UPROPERTY(Category = "Sounds", EditAnywhere, BlueprintReadWrite)
-	USoundCue* JumpSoundCue;
+	class USoundCue* JumpSoundCue;
 
 	UPROPERTY(Category = "Sounds", EditAnywhere, BlueprintReadWrite)
-	USoundCue* HardLandingSoundCue;
+	class USoundCue* HardLandingSoundCue;
 
 	UPROPERTY(Category = "Sounds", EditAnywhere, BlueprintReadWrite)
-	USoundCue* TeleportSoundCue;
+	class USoundCue* TeleportSoundCue;
 
 	void PlayJumpSound();
 	void PlayTeleportSound();
