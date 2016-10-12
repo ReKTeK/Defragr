@@ -24,5 +24,5 @@ public:
 
 public:
 	UFUNCTION()
-	virtual void OnActorEnteredVolume(class AActor* Actor);
+	virtual void OnActorEnteredVolume(class AActor* OverlappedComponent, class AActor* Actor);
 };

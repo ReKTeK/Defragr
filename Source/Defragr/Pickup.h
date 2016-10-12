@@ -48,5 +48,5 @@ public:
 
 private:
 	UFUNCTION()
-	void OnActorOverlapPickup(class AActor* Actor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult);
+	void OnActorOverlapPickup(class UPrimitiveComponent* OverlappedComponent, class AActor* Actor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult);
 };

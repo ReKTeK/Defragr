@@ -30,7 +30,7 @@ ACheckpoint::ACheckpoint(const FObjectInitializer& ObjectInitializer)
 	BrushColor.A = 255;
 }
 
-void ACheckpoint::OnActorEnteredVolume(AActor* Actor)
+void ACheckpoint::OnActorEnteredVolume(AActor* Actor, AActor* OtherActor)
 {
 	if(CheckpointType == ECheckpointType::End)
 	{
@@ -41,7 +41,7 @@ void ACheckpoint::OnActorEnteredVolume(AActor* Actor)
 	}
 }
 
-void ACheckpoint::OnActorExitedVolume(AActor* Actor)
+void ACheckpoint::OnActorExitedVolume(AActor* Actor, AActor* OtherActor)
 {
 	// If the checkpoint is a starting checkpoint then start the
 	// race timer for the player.

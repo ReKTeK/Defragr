@@ -26,7 +26,7 @@ AJumpPadVolume::AJumpPadVolume(const FObjectInitializer& ObjectInitializer)
 	BrushColor.A = 255;
 }
 
-void AJumpPadVolume::OnActorEnteredVolume(AActor* Actor)
+void AJumpPadVolume::OnActorEnteredVolume(AActor* OverlappedComponent, AActor* Actor)
 {
 	ADefragrPlayer* Player = Cast<ADefragrPlayer>(Actor);
 

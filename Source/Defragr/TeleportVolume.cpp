@@ -27,7 +27,7 @@ ATeleportVolume::ATeleportVolume(const FObjectInitializer& ObjectInitializer)
 	BrushColor.A = 255;
 }
 
-void ATeleportVolume::OnActorEnteredVolume(AActor* Actor)
+void ATeleportVolume::OnActorEnteredVolume(AActor* OverlappedComponent, AActor* Actor)
 {
 	ADefragrPlayer* Player = Cast<ADefragrPlayer>(Actor);
 

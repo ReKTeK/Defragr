@@ -299,7 +299,7 @@ bool UDefragrPlayerCollisionComponent::Trace(FHitResult& Result, FVector Start, 
 	FCollisionQueryParams QueryParams(TEXT(""), false);
 	FCollisionObjectQueryParams ObjectQueryParams(ECC_WorldStatic);
 
-	bool Hit = GetWorld()->SweepSingle(Result, Start, End, FQuat::Identity, CollisionShape, QueryParams, ObjectQueryParams);
+	bool Hit = GetWorld()->SweepSingleByObjectType(Result, Start, End, FQuat::Identity, ObjectQueryParams, CollisionShape, QueryParams);
 	
 	return Hit;
 }

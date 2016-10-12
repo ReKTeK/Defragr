@@ -45,7 +45,7 @@ ATeleportTarget::ATeleportTarget(const FObjectInitializer& ObjectInitializer)
 		SpriteComponent->Sprite                 = ConstructorStatics.TextureObject.Get();	// Get the sprite texture from helper class object
 		SpriteComponent->SpriteInfo.Category    = ConstructorStatics.ID_TeleportTarget;		// Assign sprite category name
 		SpriteComponent->SpriteInfo.DisplayName = ConstructorStatics.NAME_TeleportTarget;	// Assign sprite display name
-		SpriteComponent->AttachParent           = RootComponent;							// Attach sprite to scene component
+		SpriteComponent->SetupAttachment(RootComponent);							// Attach sprite to scene component
 		SpriteComponent->Mobility               = EComponentMobility::Static;
 		SpriteComponent->bIsScreenSizeScaled    = true;
 	}
@@ -57,7 +57,7 @@ ATeleportTarget::ATeleportTarget(const FObjectInitializer& ObjectInitializer)
 		ArrowComponent->bTreatAsASprite        = true;
 		ArrowComponent->SpriteInfo.Category    = ConstructorStatics.ID_TeleportTarget;
 		ArrowComponent->SpriteInfo.DisplayName = ConstructorStatics.NAME_TeleportTarget;
-		ArrowComponent->AttachParent           = RootComponent;
+		ArrowComponent->SetupAttachment(RootComponent);
 		ArrowComponent->bIsScreenSizeScaled    = true;
 	}
 
