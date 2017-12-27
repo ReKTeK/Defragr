@@ -2,12 +2,12 @@
  * Written by Terence-Lee 'Zinglish' Davis <zinglish[at]gmail.com>
  */
 
+#include "Projectile.h"
 #include "Defragr.h"
 
 #include "Weapon.h"
 #include "DefragrPlayer.h"
 
-#include "Projectile.h"
 
 
 AProjectile::AProjectile()

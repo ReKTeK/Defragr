@@ -3,9 +3,9 @@
  */
 
 
+#include "Checkpoint.h"
 #include "Defragr.h"
 #include "Components/BrushComponent.h"
-#include "Checkpoint.h"
 
 #include "DefragrPlayer.h"
 
@@ -30,7 +30,7 @@ ACheckpoint::ACheckpoint(const FObjectInitializer& ObjectInitializer)
 	BrushColor.A = 255;
 }
 
-void ACheckpoint::OnActorEnteredVolume(AActor* Actor)
+void ACheckpoint::OnActorEnteredVolume(AActor* Actor, AActor* Actor2)
 {
 	if(CheckpointType == ECheckpointType::End)
 	{
@@ -41,7 +41,7 @@ void ACheckpoint::OnActorEnteredVolume(AActor* Actor)
 	}
 }
 
-void ACheckpoint::OnActorExitedVolume(AActor* Actor)
+void ACheckpoint::OnActorExitedVolume(AActor* Actor, AActor* Actor2)
 {
 	// If the checkpoint is a starting checkpoint then start the
 	// race timer for the player.

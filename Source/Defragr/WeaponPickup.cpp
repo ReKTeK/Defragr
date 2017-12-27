@@ -2,13 +2,13 @@
  * Written by Terence-Lee 'Zinglish' Davis <zinglish[at]gmail.com>
  */
 
+#include "WeaponPickup.h"
 #include "Defragr.h"
 
 #include "Engine.h"
 
 #include "DefragrPlayer.h"
 
-#include "WeaponPickup.h"
 
 
 void AWeaponPickup::OnPlayerPickup(ADefragrPlayer* Player)

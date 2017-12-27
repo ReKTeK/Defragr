@@ -5,6 +5,8 @@
 #pragma once
 
 #include "GameFramework/Actor.h"
+#include "Runtime/Engine/Classes/Components/ArrowComponent.h"
+#include "Runtime/Engine/Classes/Components/BoxComponent.h"
 #include "TeleportTarget.generated.h"
 
 UCLASS(hidecategories=(Input,Rendering,Actor))

@@ -2,13 +2,13 @@
  * Written by Terence-Lee 'Zinglish' Davis <zinglish[at]gmail.com>
  */
 
+#include "Weapon.h"
 #include "Defragr.h"
 
 #include "Engine.h"
 
 #include "Projectile.h"
 
-#include "Weapon.h"
 
 
 AWeapon::AWeapon()
@@ -16,10 +16,10 @@ AWeapon::AWeapon()
 	RootSceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
 
 	FirstPersonMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("First Person Mesh"));
-	FirstPersonMesh->AttachParent = RootSceneComponent;
+	FirstPersonMesh->SetupAttachment(RootSceneComponent);
 
 	ThirdPersonMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Third Person Mesh"));
-	ThirdPersonMesh->AttachParent = RootSceneComponent;
+	ThirdPersonMesh->SetupAttachment(RootSceneComponent);
 }
 
 void AWeapon::BeginPlay()

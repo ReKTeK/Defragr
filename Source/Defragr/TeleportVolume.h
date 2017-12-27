@@ -26,5 +26,5 @@ public:
 
 public:
 	UFUNCTION()
-	virtual void OnActorEnteredVolume(class AActor* Actor);
+	virtual void OnActorEnteredVolume(class AActor* Actor, class AActor* Actor2);
 };

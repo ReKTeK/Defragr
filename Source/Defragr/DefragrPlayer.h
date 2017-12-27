@@ -5,6 +5,10 @@
 #pragma once
 
 #include "GameFramework/Pawn.h"
+#include "Runtime/Engine/Classes/Sound/SoundCue.h"
+#include "Runtime/Engine/Classes/Components/BoxComponent.h"
+#include "Runtime/Engine/Classes/Camera/CameraComponent.h"
+#include "Runtime/Engine/Classes/Components/ArrowComponent.h"
 
 #include "DefragrPlayer.generated.h"
 
