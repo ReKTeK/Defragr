@@ -2,13 +2,13 @@
  * Written by Terence-Lee 'Zinglish' Davis <zinglish[at]gmail.com>
  */
 
+#include "Pickup.h"
 #include "Defragr.h"
 
 #include "Engine.h"
 
 #include "DefragrPlayer.h"
 
-#include "Pickup.h"
 
 
 // Sets default values
@@ -32,7 +32,7 @@ APickup::APickup()
 
 	// Create the pickup mesh
 	PickupMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("PickupMesh"));
-	PickupMesh->AttachTo(RootComponent);
+	PickupMesh->SetupAttachment(RootComponent);
 }
 
 void APickup::BeginPlay() {Super::BeginPlay();}
@@ -41,7 +41,7 @@ void APickup::Tick(float DeltaTime) {Super::Tick(DeltaTime);}
 void APickup::OnPlayerPickup(ADefragrPlayer* Player) {}
 void APickup::OnPickedUp_Implementation() {}
 
-void APickup::OnActorOverlapPickup(class AActor* Actor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult)
+void APickup::OnActorOverlapPickup(class UPrimitiveComponent* Comp, class AActor* Actor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult)
 {
 	ADefragrPlayer* Player = Cast<ADefragrPlayer>(Actor);
 

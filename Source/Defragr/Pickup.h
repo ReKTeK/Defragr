@@ -5,6 +5,8 @@
 #pragma once
 
 #include "GameFramework/Actor.h"
+#include "Runtime/Engine/Classes/Components/StaticMeshComponent.h"
+#include "Runtime/Engine/Classes/Components/BoxComponent.h"
 #include "Pickup.generated.h"
 
 class ADefragrPlayer;
@@ -48,5 +50,5 @@ public:
 
 private:
 	UFUNCTION()
-	void OnActorOverlapPickup(class AActor* Actor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult);
+	void OnActorOverlapPickup(class UPrimitiveComponent* Comp, class AActor* Actor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult);
 };

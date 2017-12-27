@@ -1,7 +1,7 @@
 // Copyright 1998-2015 Epic Games, Inc. All Rights Reserved.
 
-#include "Defragr.h"
 #include "DefragrGameMode.h"
+#include "Defragr.h"
 #include "DefragrHUD.h"
 #include "DefragrPlayer.h"
 

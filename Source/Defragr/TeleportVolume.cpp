@@ -2,9 +2,9 @@
  * Written by Terence-Lee 'Zinglish' Davis <zinglish[at]gmail.com>
  */
 
+#include "TeleportVolume.h"
 #include "Defragr.h"
 #include "Components/BrushComponent.h"
-#include "TeleportVolume.h"
 
 #include "DefragrPlayer.h"
 #include "DefragrPlayerMoveComponent.h"
@@ -27,7 +27,7 @@ ATeleportVolume::ATeleportVolume(const FObjectInitializer& ObjectInitializer)
 	BrushColor.A = 255;
 }
 
-void ATeleportVolume::OnActorEnteredVolume(AActor* Actor)
+void ATeleportVolume::OnActorEnteredVolume(AActor* Actor, AActor* Actor2)
 {
 	ADefragrPlayer* Player = Cast<ADefragrPlayer>(Actor);
 

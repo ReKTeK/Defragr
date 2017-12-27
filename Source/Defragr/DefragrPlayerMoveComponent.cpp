@@ -2,10 +2,11 @@
  * Written by Terence-Lee 'Zinglish' Davis <zinglish[at]gmail.com>
  */
 
+#include "DefragrPlayerMoveComponent.h"
 #include "Defragr.h"
 #include "DefragrPlayer.h"
-#include "DefragrPlayerMoveComponent.h"
 #include "DefragrPlayerCollisionComponent.h"
+#include "Runtime/Core/Public/GenericPlatform/GenericPlatformMath.h"
 
 #include "Engine.h"
 
@@ -16,7 +17,6 @@ UDefragrPlayerMoveComponent::UDefragrPlayerMoveComponent(const FObjectInitialize
 {
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
-	bWantsBeginPlay = true;
 	PrimaryComponentTick.bCanEverTick = true;
 }
 
@@ -318,9 +318,9 @@ float UDefragrPlayerMoveComponent::CmdScale()
 	float	total;
 	float	scale;
 
-	max = abs(WishMove.X);
-	if (abs(WishMove.Y) > max) {
-		max = abs(WishMove.Y);
+	max = FGenericPlatformMath::Abs(WishMove.X);
+	if (FGenericPlatformMath::Abs(WishMove.Y) > max) {
+		max = FGenericPlatformMath::Abs(WishMove.Y);
 	}
 	/*if (abs(cmd->upmove) > max) {
 		max = abs(cmd->upmove);

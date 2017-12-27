@@ -2,8 +2,8 @@
  * Written by Terence-Lee 'Zinglish' Davis <zinglish[at]gmail.com>
  */
 
-#include "Defragr.h"
 #include "DefragrPlayer.h"
+#include "Defragr.h"
 #include "DefragrPlayerMoveComponent.h"
 #include "DefragrPlayerCollisionComponent.h"
 #include "Weapon.h"
@@ -35,7 +35,7 @@ ADefragrPlayer::ADefragrPlayer()
 	// Add physical reference to the player's forward vector
 	PlayerForwardRefComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Player Forward"));
 	if(PlayerForwardRefComponent)
-		PlayerForwardRefComponent->AttachParent = Collider;
+		PlayerForwardRefComponent->SetupAttachment(Collider);
 
 	// Add a helper
 #if WITH_EDITORONLY_DATA
@@ -46,14 +46,14 @@ ADefragrPlayer::ADefragrPlayer()
 		ArrowComponent->bTreatAsASprite = true;
 		ArrowComponent->SpriteInfo.Category = ConstructorStatics.ID_Characters;
 		ArrowComponent->SpriteInfo.DisplayName = ConstructorStatics.NAME_Characters;
-		ArrowComponent->AttachParent = PlayerForwardRefComponent;
+		ArrowComponent->SetupAttachment(PlayerForwardRefComponent);
 		ArrowComponent->bIsScreenSizeScaled = true;
 	}
 #endif
 
 	// Initialize the camera
 	FirstPersonCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("First Person Camera"));
-	FirstPersonCameraComponent->AttachParent = PlayerForwardRefComponent;
+	FirstPersonCameraComponent->SetupAttachment(PlayerForwardRefComponent);
 	FirstPersonCameraComponent->SetRelativeLocation(FVector(0.f, 0.f, 56.f - 4.f));
 
 	// Add the character collision and movement component

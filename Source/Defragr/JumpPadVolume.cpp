@@ -2,9 +2,9 @@
  * Written by Terence-Lee 'Zinglish' Davis <zinglish[at]gmail.com>
  */
 
+#include "JumpPadVolume.h"
 #include "Defragr.h"
 #include "Components/BrushComponent.h"
-#include "JumpPadVolume.h"
 
 #include "DefragrPlayer.h"
 
@@ -26,7 +26,7 @@ AJumpPadVolume::AJumpPadVolume(const FObjectInitializer& ObjectInitializer)
 	BrushColor.A = 255;
 }
 
-void AJumpPadVolume::OnActorEnteredVolume(AActor* Actor)
+void AJumpPadVolume::OnActorEnteredVolume(AActor * Actor, AActor * Actor2)
 {
 	ADefragrPlayer* Player = Cast<ADefragrPlayer>(Actor);
 
